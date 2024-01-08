@@ -7,7 +7,7 @@ const helmet= require("helmet")
 
 const app = express();
 
-
+///  here start the free code code first chapter solution 
 app.use(helmet())
 app.use(helmet.hidePoweredBy())
 app.use(helmet.frameguard({action: 'deny'}))
@@ -24,6 +24,9 @@ app.use(
     },
   })
 );
+
+///  here end the free code code first chapter solution 
+
 
 
 const port = process.env.PORT || 5000;
