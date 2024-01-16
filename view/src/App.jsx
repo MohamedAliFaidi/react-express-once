@@ -1,74 +1,53 @@
-// import { useEffect, useState, useCallback } from "react";
-// import "./App.css";
-// import Navbar from "./components/Navbar";
-// import New from "./components/New";
-
-// function App() {
-//   const [movies, setMovies] = useState([])
-
-//   const getMovies = useCallback(async () => {
-//     const response = await fetch('http://localhost:3000/movies')
-//     const moviesData = await response.json()
-//     setMovies(moviesData)
-//   }, [setMovies])
-
-//   console.log(window.location.pathname)
-
-//   useEffect(() => {
-//     getMovies()
-    
-//   }, [getMovies])
-//   return <>
-//     <Navbar />
-//     {
-//       window.location.pathname =="/movies" && <>movie list</>
-//     }
-//       {
-//       window.location.pathname =="/new" && <New/>
-//     }
-//   </>;
-// }
-
-// export default App;
 
 
 
 
-import {useEffect ,useState} from 'react'
+import { useEffect, useState } from 'react'
 import List from "./components/List"
 import Navbar from './components/Navbar'
 import New from './components/New'
 import Filter from './components/Filter'
-function App (){
- const [movies,setMovies] = useState([])
- const [filtred , setFiltred] = useState([])
+import { Routes, Route  ,useLocation} from "react-router-dom"
+import Movie from './components/Movie'
+function App() {
+  const [movies, setMovies] = useState([])
+  const [filtred, setFiltred] = useState([])
+  const location = useLocation()
 
-const getMovies = async ()=> {
-   const response = await fetch('http://localhost:3000/movies',{
-    method:"GET",
-    headers : { 
-      "Content-type" : "application/json"
-    },
-   })
-   if(response.ok){
-    const data = await response.json()
-    setMovies(data)
-   }
-}
+  const getMovies = async () => {
+    const response = await fetch('http://localhost:3000/movies', {
+      method: "GET",
+      headers: {
+        "Content-type": "application/json"
+      },
+    })
+    if (response.ok) {
+      const data = await response.json()
+      setMovies(data)
+    }
+  }
 
 
-useEffect(()=>{
- getMovies()
-},
-[])
+  useEffect(() => {
+    getMovies()
+    console.log(location)
+  },
+    [])
 
   return (
     <div>
       <Navbar />
-       { window.location.pathname=="/" &&<List movies={filtred.length >0 ? filtred:movies} />}
-       { window.location.pathname=="/new" &&<New setMovies={setMovies} />}
+     { !location.pathname.split('/').includes('movie') && <Filter movies={movies} setFiltred={setFiltred} />}
 
-      <Filter movies={movies} setFiltred={setFiltred} />
+      <Routes>
+        <Route path='/' element={<List movies={filtred.length > 0 ? filtred : movies} />} />
+        <Route path='/new' element={<New setMovies={setMovies} />} />
+        <Route path='/movie/:id' element={<Movie />} />
+
+
+
+      </Routes>
+
     </div>
   )
 }
