@@ -1,0 +1,67 @@
+{
+  "movies": [
+    {
+      "title": "Inception",
+      "description": "A mind-bending heist movie that explores the concept of dreams within dreams.",
+      "posterURL": "https://www.themoviedb.org/t/p/original/edv5CZvWj09upOsy2Y6IwDhK8bt.jpg",
+      "rating": 8.7,
+      "id": "eec7"
+    },
+    {
+      "title": "The Shawshank Redemption",
+      "description": "The story of a banker sentenced to life in Shawshank State Penitentiary and his journey to freedom.",
+      "posterURL": "https://www.tallengestore.com/cdn/shop/products/Movie_Poster_Art_-_The_Shawshank_Redemption_-_Tallenge_Hollywood_Poster_Collection_281a20ac-f062-4b7d-8ccc-436d690078af.jpg?v=1578138044",
+      "rating": 9.3,
+      "id": "26f8"
+    },
+    {
+      "title": "The Dark Knight",
+      "description": "Batman faces the Joker, a criminal mastermind with a twisted sense of humor, in this intense superhero film.",
+      "posterURL": "https://www.themoviedb.org/t/p/original/vGYJRor3pCyjbaCpJKC39MpJhIT.jpg",
+      "rating": 9,
+      "id": "acd2"
+    },
+    {
+      "id": "c7c9",
+      "title": ",hagzehgj",
+      "description": "d;jbna,dbj",
+      "posterURL": "https://artwisher.com/files/products/800x1423_6409.1400x1400.jpg",
+      "rating": "3123"
+    },
+    {
+      "id": "bbd6",
+      "title": "Saw",
+      "description": "horror movie 2004",
+      "posterURL": "https://diamondpaint.shop/wp-content/uploads/2022/08/Saw-Movie-Poster-diamond-paintings.jpg",
+      "rating": "9"
+    },
+    {
+      "id": "e2e1",
+      "title": "saw",
+      "description": "djbnsqd ",
+      "posterURL": "https://diamondpaint.shop/wp-content/uploads/2022/08/Saw-Movie-Poster-diamond-paintings.jpg",
+      "rating": "4"
+    },
+    {
+      "id": "ac45",
+      "title": "eazea",
+      "description": "eaze",
+      "posterURL": "https://diamondpaint.shop/wp-content/uploads/2022/08/Saw-Movie-Poster-diamond-paintings.jpg",
+      "rating": "2"
+    },
+    {
+      "id": "31af",
+      "title": "black widows",
+      "description": "action movie ... ",
+      "posterURL": "https://i.redd.it/qzrztw1zjga71.jpg",
+      "rating": "12"
+    },
+    {
+      "id": "df0c",
+      "title": "",
+      "description": "",
+      "posterURL": "https://i.redd.it/qzrztw1zjga71.jpg",
+      "rating": "2"
+    }
+  ]
+}
